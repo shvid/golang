@@ -6,9 +6,11 @@
 #
 
 GO_VER := 1.14.6
-IMAGE := golang
-VERSION := $(GO_VER)-$(shell git describe --tags --always --dirty)
-REGISTRY := shvid
+IMAGE = golang
+VERSION := $(shell git describe --tags --always --dirty)
+REGISTRY = shvid
+TAG := $(VERSION)
+PWD := $(shell pwd)
 
 all: build
 
